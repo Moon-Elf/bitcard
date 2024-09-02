@@ -5,6 +5,7 @@ import AddForm from './pages/AddForm';
 import SharePage from './pages/SharePage';
 import Login from './pages/Login';
 import Register from './pages/Register';
+import './styles.css';
 
 const ProtectedRoute = ({ element, ...rest }) => {
   const user = JSON.parse(localStorage.getItem('user'));
