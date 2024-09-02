@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { getCards } from '../api/cards';
+import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const SharePage = () => {
   const [cards, setCards] = useState([]);
@@ -213,6 +215,7 @@ const SharePage = () => {
               </div>
             </div>
           ))}
+            <Link to="/dashboard"><button type="button"> Back </button></Link>
           <button type="button" onClick={handleShare}>Share Selected Details</button>
         </form>
       )}
