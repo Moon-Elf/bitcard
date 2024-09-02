@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = 'http://localhost:5000/api/cards/'; // Update with your backend API endpoint
+const API_URL = 'https://bitcard-backend.vercel.app/api/cards/'; // Update with your backend API endpoint
 
 // Get all cards
 const getCards = async (token) => {

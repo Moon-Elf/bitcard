@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = 'http://localhost:5000/api/auth/';
+const API_URL = 'https://bitcard-backend.vercel.app/api/auth/';
 
 // Login function example
 const login = async (userData) => {
