@@ -140,6 +140,7 @@ const SharePage = () => {
               </label>
             </div>
           ))}
+          <Link to="/"><button type="button"> Back </button></Link>
           <button type="button" onClick={handleShare}>Share Selected Cards</button>
         </form>
       ) : (
@@ -215,7 +216,7 @@ const SharePage = () => {
               </div>
             </div>
           ))}
-            <Link to="/dashboard"><button type="button"> Back </button></Link>
+          <Link to="/"><button type="button"> Back </button></Link>
           <button type="button" onClick={handleShare}>Share Selected Details</button>
         </form>
       )}
