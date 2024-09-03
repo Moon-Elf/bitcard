@@ -3,7 +3,7 @@ import { saveCard } from '../api/cards'; // We'll implement this API call next
 
 const AddForm = () => {
   const [formType, setFormType] = useState('person');
-  const [fields, setFields] = useState([{ label: '', value: '' }]);
+  const [fields, setFields] = useState([]);  // Initialize with an empty array
   const [formData, setFormData] = useState({
     name: '',
     phoneNumber: '',
@@ -25,7 +25,7 @@ const AddForm = () => {
 
   const handleFieldChange = (index, e) => {
     const { name, value } = e.target;
-    const newFields = fields.slice();
+    const newFields = [...fields];
     newFields[index][name] = value;
     setFields(newFields);
   };
