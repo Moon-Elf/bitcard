@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 const EditForm = () => {
   const { id } = useParams();
   const [formType, setFormType] = useState('person');
-  const [fields, setFields] = useState([{ label: '', value: '' }]);
+  const [fields, setFields] = useState([]);
   const [formData, setFormData] = useState({});
   const navigate = useNavigate();
 

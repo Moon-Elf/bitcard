@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { saveCard } from '../api/cards'; // We'll implement this API call next
+import { saveCard } from '../api/cards'; 
+import { Link } from 'react-router-dom';
 
 const AddForm = () => {
   const [formType, setFormType] = useState('person');
@@ -52,6 +53,7 @@ const AddForm = () => {
 
   return (
     <div>
+      <Link to="/"><button type='button'>Back</button></Link>
       <h1>Add New Card</h1>
       <form onSubmit={handleSubmit}>
         <div>
