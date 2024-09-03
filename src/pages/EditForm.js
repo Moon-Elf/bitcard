@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { getCardById, updateCard } from '../api/cards';
 import { useNavigate, useParams } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const EditForm = () => {
   const { id } = useParams();
@@ -44,6 +45,7 @@ const EditForm = () => {
 
   return (
     <div>
+      <Link to="/"><button type='button'>Back</button></Link>
       <h1>Edit Card</h1>
       <form onSubmit={handleSubmit}>
         <input
