@@ -84,14 +84,14 @@ const AddForm = () => {
               placeholder="Name"
               value={formData.name}
               onChange={handleInputChange}
-            />
+            /><br/>
             <input
               type="text"
               name="phoneNumber"
               placeholder="Phone Number"
               value={formData.phoneNumber}
               onChange={handleInputChange}
-            />
+            /><br/>
             <input
               type="text"
               name="email"
@@ -109,14 +109,14 @@ const AddForm = () => {
               placeholder="Company Name"
               value={formData.companyName}
               onChange={handleInputChange}
-            />
+            /><br/>
             <input
               type="text"
               name="contactNo"
               placeholder="Contact No."
               value={formData.contactNo}
               onChange={handleInputChange}
-            />
+            /><br/>
             <input
               type="text"
               name="gstNo"
@@ -126,7 +126,7 @@ const AddForm = () => {
             />
           </div>
         )}
-        <input
+        <br/><input
           type="text"
           name="address"
           placeholder="Address"
