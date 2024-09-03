@@ -50,6 +50,15 @@ const Dashboard = () => {
               <p>{card.type === 'person' ? `Phone: ${card.phoneNumber}` : `Contact No: ${card.contactNo}`}</p>
               <p>{card.type === 'person' ? `Email: ${card.email}` : `GST NO: ${card.gstNo}`}</p>
               <p>Address: {card.address}</p>
+              {/* Display additional fields */}
+              {card.additionalFields && card.additionalFields.length > 0 && (
+                <div>
+                  <h3>Additional Information:</h3>
+                  {card.additionalFields.map((field, index) => (
+                    <p key={index}><strong>{field.label}:</strong> {field.value}</p>
+                  ))}
+                </div>
+              )}
               <button onClick={() => handleEdit(card._id)}>Edit</button>
             </div>
           ))
