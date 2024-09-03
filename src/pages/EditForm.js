@@ -88,21 +88,23 @@ const EditForm = () => {
           </label>
         </div>
         {formType === 'person' && (
-          <div>
+          <div><label>Name:   </label>
             <input
               type="text"
               name="name"
               placeholder="Name"
               value={formData.name || ''}
               onChange={handleChange}
-            />
+            /><br/>
+            <label>Phone Number:   </label>
             <input
               type="text"
               name="phoneNumber"
               placeholder="Phone Number"
               value={formData.phoneNumber || ''}
               onChange={handleChange}
-            />
+            /><br/>
+            <label>Email:   </label>
             <input
               type="text"
               name="email"
@@ -114,20 +116,23 @@ const EditForm = () => {
         )}
         {formType === 'organization' && (
           <div>
+            <label>Company Name:   </label>
             <input
               type="text"
               name="companyName"
               placeholder="Company Name"
               value={formData.companyName || ''}
               onChange={handleChange}
-            />
+            /><br/>
+            <label>Contact No:   </label>
             <input
               type="text"
               name="contactNo"
               placeholder="Contact No."
               value={formData.contactNo || ''}
               onChange={handleChange}
-            />
+            /><br/>
+            <label>GST NO:   </label>
             <input
               type="text"
               name="gstNo"
@@ -136,7 +141,8 @@ const EditForm = () => {
               onChange={handleChange}
             />
           </div>
-        )}
+        )}<br/>
+            <label>Address:   </label>
         <input
           type="text"
           name="address"
