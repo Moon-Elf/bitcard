@@ -30,6 +30,10 @@ const Dashboard = () => {
     navigate('/login');
   };
 
+  const handleEdit = (cardId) => {
+    navigate(`/edit/${cardId}`);
+  };
+  
   return (
     <div>
       <h1>Dashboard</h1>
@@ -46,6 +50,7 @@ const Dashboard = () => {
               <p>{card.type === 'person' ? `Phone: ${card.phoneNumber}` : `Contact No: ${card.contactNo}`}</p>
               <p>{card.type === 'person' ? `Email: ${card.email}` : `GST NO: ${card.gstNo}`}</p>
               <p>Address: {card.address}</p>
+              <button onClick={() => handleEdit(card._id)}>Edit</button>
             </div>
           ))
         ) : (

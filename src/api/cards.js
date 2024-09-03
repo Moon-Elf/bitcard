@@ -11,7 +11,19 @@ const getCards = async (token) => {
   });
   return response.data;
 };
+export const getCardById = async (id, token) => {
+  const response = await axios.get(`${API_URL}${id}`, {
+    headers: { Authorization: `Bearer ${token}` }
+  });
+  return response.data;
+};
 
+export const updateCard = async (id, cardData, token) => {
+  const response = await axios.put(`${API_URL}${id}`, cardData, {
+    headers: { Authorization: `Bearer ${token}` }
+  });
+  return response.data;
+};
 // Save a new card
 const saveCard = async (token, cardData) => {
   const response = await axios.post(API_URL, cardData, {

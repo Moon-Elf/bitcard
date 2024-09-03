@@ -5,6 +5,7 @@ import AddForm from './pages/AddForm';
 import SharePage from './pages/SharePage';
 import Login from './pages/Login';
 import Register from './pages/Register';
+import EditForm from './pages/EditForm';
 import './styles.css';
 
 const ProtectedRoute = ({ element, ...rest }) => {
@@ -20,6 +21,7 @@ function App() {
         <Route path="/register" element={<Register />} />
         <Route path="/" element={<ProtectedRoute element={<Dashboard />} />} />
         <Route path="/add" element={<ProtectedRoute element={<AddForm />} />} />
+        <Route path="/edit/:id" element={<EditForm />} />
         <Route path="/share" element={<ProtectedRoute element={<SharePage />} />} />
       </Routes>
     </Router>
